@@ -44,6 +44,7 @@ class Route
   {
     $parsed = parse_url($uri);
     $uri = $parsed['path'];
+    //var_dump($uri); 
     if (isset($this->routes[$uri])) {
       $this->controller = new $this->routes[$uri][0];
       $this->action = $this->routes[$uri][1];
